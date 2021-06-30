@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="ryFHHI" name="Dexed" projectType="audioplug" version="1.0.0"
+<JUCERPROJECT id="ryFHHI" name="Dexed" projectType="audioplug" version="0.9.6"
               bundleIdentifier="com.digitalsuburban.Dexed" includeBinaryInAppConfig="1"
-              buildVST="0" buildAU="1" pluginName="Dexed" pluginDesc="Dexed FM Synth"
+              buildVST="1" buildAU="0" pluginName="Dexed" pluginDesc="Dexed FM Synth"
               pluginManufacturer="Digital Suburban" pluginManufacturerCode="DGSB"
               pluginCode="Dexd" pluginChannelConfigs="{0, 2}" pluginIsSynth="1"
               pluginWantsMidiIn="1" pluginProducesMidiOut="1" pluginSilenceInIsSilenceOut="0"
               pluginEditorRequiresKeys="0" pluginAUExportPrefix="DexedAU" pluginRTASCategory=""
               aaxIdentifier="com.yourcompany.Dexed" pluginAAXCategory="2" companyName="Digital Suburban"
-              buildVST3="1" buildRTAS="0" buildAAX="0" pluginManufacturerEmail="support@yourcompany.com"
+              buildVST3="0" buildRTAS="0" buildAAX="0" pluginManufacturerEmail="support@yourcompany.com"
               buildAUv3="0" pluginIsMidiEffectPlugin="0" displaySplashScreen="0"
               reportAppUsage="0" splashScreenColour="Dark" buildStandalone="1"
               enableIAA="0" cppLanguageStandard="latest" companyCopyright="Digital Suburban"
-              pluginFormats="buildAU,buildStandalone,buildVST3" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn,pluginProducesMidiOut"
+              pluginFormats="buildStandalone,buildVST" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn,pluginProducesMidiOut"
               jucerFormatVersion="1">
   <MAINGROUP id="kHXTgw" name="Dexed">
     <GROUP id="{F12593AE-639A-6F59-5819-ACE25AF86F95}" name="Resources">
@@ -124,28 +124,6 @@
     </GROUP>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <LINUX_MAKE targetFolder="Builds/Linux" vstLegacyFolder="VST2SDK_DIR" smallIcon="SpSpb4"
-                bigIcon="SpSpb4" extraLinkerFlags="-fPIC" extraCompilerFlags="-I../../libs/tuning-library/include">
-      <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="Dexed"/>
-        <CONFIGURATION name="Release" isDebug="0" optimisation="2" targetName="Dexed"/>
-      </CONFIGURATIONS>
-      <MODULEPATHS>
-        <MODULEPATH id="juce_audio_basics" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_plugin_client" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_core" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_graphics" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_extra" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="surgesynthteam_tuningui" path="./libs"/>
-      </MODULEPATHS>
-    </LINUX_MAKE>
     <XCODE_MAC targetFolder="Builds/MacOSX" smallIcon="SpSpb4" bigIcon="SpSpb4"
                vst3Folder="libs/vst3sdk" extraCompilerFlags="-I../../libs/tuning-library/include -Wno-macro-redefined -Wno-deprecated-declarations -Wno-shorten-64-to-32">
       <CONFIGURATIONS>
@@ -170,35 +148,6 @@
         <MODULEPATH id="surgesynthteam_tuningui" path="./libs"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <VS2017 targetFolder="Builds/VisualStudio2017" windowsTargetPlatformVersion="10.0.16299.0"
-            IPPLibrary="Parallel_Static" bigIcon="SpSpb4" smallIcon="SpSpb4"
-            vst3Folder="libs/vst3sdk" extraCompilerFlags="/I../../libs/tuning-library/include">
-      <CONFIGURATIONS>
-        <CONFIGURATION name="Debug" winWarningLevel="3" generateManifest="1" winArchitecture="x64"
-                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
-                       linkTimeOptimisation="0" isDebug="1" optimisation="1" targetName="Dexed"
-                       useRuntimeLibDLL=""/>
-        <CONFIGURATION name="Release" winWarningLevel="3" generateManifest="1" winArchitecture="x64"
-                       debugInformationFormat="ProgramDatabase" enablePluginBinaryCopyStep="0"
-                       linkTimeOptimisation="1" isDebug="0" optimisation="3" targetName="Dexed"
-                       useRuntimeLibDLL="0"/>
-      </CONFIGURATIONS>
-      <MODULEPATHS>
-        <MODULEPATH id="juce_gui_extra" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_gui_basics" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_graphics" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_events" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_data_structures" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_core" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_utils" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_processors" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_plugin_client" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_formats" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_devices" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="juce_audio_basics" path="./assets/JUCE/modules"/>
-        <MODULEPATH id="surgesynthteam_tuningui" path="./libs"/>
-      </MODULEPATHS>
-    </VS2017>
     <VS2019 targetFolder="Builds/VisualStudio2019" IPPLibrary="Parallel_Static"
             extraCompilerFlags="/I../../libs/tuning-library/include" smallIcon="SpSpb4"
             bigIcon="SpSpb4">
@@ -230,19 +179,19 @@
     </VS2019>
   </EXPORTFORMATS>
   <MODULES>
-    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="1"
             useGlobalPath="1"/>
-    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
-    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="0"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="surgesynthteam_tuningui" showAllCode="1" useLocalCopy="0"
             useGlobalPath="0"/>
   </MODULES>
