@@ -13,7 +13,7 @@
               reportAppUsage="0" splashScreenColour="Dark" buildStandalone="1"
               enableIAA="0" cppLanguageStandard="latest" companyCopyright="Digital Suburban"
               pluginFormats="buildStandalone,buildVST" pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn,pluginProducesMidiOut"
-              jucerFormatVersion="1">
+              jucerFormatVersion="1" defines="JUCE_MODAL_LOOPS_PERMITTED=1">
   <MAINGROUP id="kHXTgw" name="Dexed">
     <GROUP id="{F12593AE-639A-6F59-5819-ACE25AF86F95}" name="Resources">
       <FILE id="kj2Ow6" name="dexed-logo.png" compile="0" resource="1" file="Resources/ui/dexed-logo.png"/>
@@ -129,10 +129,11 @@
                hardenedRuntime="1">
       <CONFIGURATIONS>
         <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="Dexed"
-                       osxCompatibility="10.10 SDK" osxArchitecture="Native" enablePluginBinaryCopyStep="1"/>
+                       osxCompatibility="10.9 SDK" osxArchitecture="Native" enablePluginBinaryCopyStep="1"
+                       macOSDeploymentTarget="10.9"/>
         <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="Dexed"
-                       osxSDK="10.10 SDK" osxCompatibility="10.9 SDK" enablePluginBinaryCopyStep="0"
-                       codeSigningIdentity="Developer ID Application: Dunne &amp; Associates Technology Consulting, Inc (W5AEHZN66V)"/>
+                       osxCompatibility="10.9 SDK" enablePluginBinaryCopyStep="0" codeSigningIdentity="Developer ID Application: Dunne &amp; Associates Technology Consulting, Inc (W5AEHZN66V)"
+                       macOSDeploymentTarget="10.9"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_gui_extra" path="./assets/JUCE/modules"/>
